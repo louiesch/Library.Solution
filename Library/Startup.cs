@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ToDoList.Models;
+using Library.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace ToDoList
+namespace Library
 {
   public class Startup
   {
