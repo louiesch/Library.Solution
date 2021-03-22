@@ -53,15 +53,15 @@ Functionality___
 
 Workflow___
 1. Models
-  - Book models
-  - Author Models
+  DONE - Book models
+  DONE - Author Models
   - Copies Models
   - Patron Models (ApplicationUser)
   - LibraryContext models
   - DesignTimeDbContextFactory models
-  - BookAuthor Models
+  DONE - AuthorBook Models
+  - CopiesPatrons Models
   - BookCopies Models
-  - BookPatron Models
 2. Home Controller and Home View
 3. Book Class
   - Create Index Route then View
