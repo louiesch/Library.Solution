@@ -52,16 +52,17 @@ Functionality___
     - See list of books they checked out only.
 
 Workflow___
+ApplicationUser = Patron
 1. Models
   DONE - Book models
   DONE - Author Models
-  - Copies Models
+  DONE - Copies Models
   - Patron Models (ApplicationUser)
   - LibraryContext models
   - DesignTimeDbContextFactory models
   DONE - AuthorBook Models
-  - CopiesPatrons Models
-  - BookCopies Models
+  (sort itself out?) - CopiesPatrons Models
+  DONE - BookCopies Models
 2. Home Controller and Home View
 3. Book Class
   - Create Index Route then View
