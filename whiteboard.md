@@ -20,6 +20,8 @@ Functionality___
   - Full CRUD + Index
   - Properties
     - Author joinentity
+    - Patron Joinentity
+    - Copies JoinEntity
     - Title
 2. Search functionality
 3. Author class
@@ -48,3 +50,25 @@ Functionality___
     - Have access to Books CRUD, Author CRUD
   - Patrons Login
     - See list of books they checked out only.
+
+Workflow___
+1. Models
+  - Book models
+  - Author Models
+  - Copies Models
+  - Patron Models (ApplicationUser)
+  - LibraryContext models
+  - DesignTimeDbContextFactory models
+  - BookAuthor Models
+  - BookCopies Models
+  - BookPatron Models
+2. Home Controller and Home View
+3. Book Class
+  - Create Index Route then View
+  - Create "Create" route then view
+  - Create Delete route then view
+  - Create Update route then view
+  - Create Details route then view
+4. Patrons (User Application)
+  - Controllers
+  - Login page view

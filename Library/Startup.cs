@@ -26,11 +26,11 @@ namespace Library
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<ToDoListContext>(options => options
+        .AddDbContext<LibraryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
         
       services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ToDoListContext>()
+        .AddEntityFrameworkStores<LibraryContext>()
         .AddDefaultTokenProviders();
 
       services.Configure<IdentityOptions>(options =>
