@@ -57,7 +57,7 @@ ApplicationUser = Patron
   DONE - Book models
   DONE - Author Models
   DONE - Copies Models
-  - Patron Models (ApplicationUser)
+  DONE - Patron Models (ApplicationUser)
   - LibraryContext models
   - DesignTimeDbContextFactory models
   DONE - AuthorBook Models
