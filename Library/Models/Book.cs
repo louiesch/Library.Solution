@@ -7,12 +7,12 @@ namespace Library.Models
     public Book()
     {
       JoinEntities1 = new HashSet<AuthorBook>();
-      JoinEntities2 = new HashSet<BookCopies>();
+      JoinEntities2 = new HashSet<BookCopy>();
     }
 
     public int BookId {get; set;}
     public string Title {get; set;}
     public virtual ICollection<AuthorBook> JoinEntities1 {get;}
-    public virtual ICollection<BookCopies> JoinEntities2 {get; }
+    public virtual ICollection<BookCopy> JoinEntities2 {get; }
   }
 }
