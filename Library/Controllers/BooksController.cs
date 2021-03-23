@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Library.Controllers
 {
-  public class BooksController : Controller
+  public class BooksrController : Controller
   {
     private readonly LibraryContext _db;
     public BooksController(LibraryContext db)
@@ -18,5 +18,19 @@ namespace Library.Controllers
     {
       return View(_db.Books.ToList());
     }
+
+    public ActionResult Create()
+    {
+  
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Book book)
+    {
+      _db.Books.Add(book);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
-}
+}(
