@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Library.Models;
+
+<h1>Books Available in Library</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>No Books in Library</h3>
+}
+
+<ul>
+  @foreach(Book bookElement in Model)
+  {
+    <li>@Html.ActionLink($"{bookElement.Title}", "Details", new {id = bookElement.BookId}) </li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add new book", "Create")</p>
