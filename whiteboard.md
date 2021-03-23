@@ -20,7 +20,6 @@ Functionality___
   - Full CRUD + Index
   - Properties
     - Author joinentity
-    - Patron Joinentity
     - Copies JoinEntity
     - Title
 2. Search functionality
@@ -35,7 +34,7 @@ Functionality___
   - Properties
     - Name
     - Book Joinentity
-6. BookCustomer class
+6. BookCustomer class (Automatic)
   - join customer and book classes
   - many to many
 7. Copies Class
