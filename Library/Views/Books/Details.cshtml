@@ -17,7 +17,13 @@ else
   <ul>
     @foreach(AuthorBook join in Model.JoinEntities1)
     {
-      <li>@join.Author.Name</li>
+      <li>@join.Author.Name 
+        @using (Html.BeginForm("DeleteAuthor", "Books"))
+        {
+          @Html.Hidden("joinId", @join.AuthorBookId)
+          <button type="submit" class="btn-sm btn-danger btn">Delete Author</button>
+        }
+      </li>
     }
   </ul>
 }
@@ -31,7 +37,13 @@ else
   <ul>
     @foreach(BookCopy join2 in Model.JoinEntities2)
     {
-      <li>@join2.Copy.CopyId</li>
+      <li>@join2.Copy.CopyId 
+        @using (Html.BeginForm("DeleteCopy", "Books"))
+        {
+          @Html.Hidden("joinId", @join2.BookCopyId)
+          <button type="submit" class="btn-sm btn-danger btn">Delete Copy</button>
+        }
+      </li>
     }
   </ul>
 }

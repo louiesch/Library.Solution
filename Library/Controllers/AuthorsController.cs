@@ -46,6 +46,13 @@ namespace Library.Controllers
       _db.Authors.Remove(thisAuthor);
       return RedirectToAction("Index");
     }
-
+    [HttpPost]
+    public ActionResult DeleteAuthor (int joinId)
+    {
+      var joinEntry = _db.AuthorBook.FirstOrDefault(entry => entry.AuthorBookId == joinId);
+      _db.AuthorBook.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
