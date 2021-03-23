@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Library.Controllers
 {
-  public class BooksrController : Controller
+  public class BooksController : Controller
   {
     private readonly LibraryContext _db;
     public BooksController(LibraryContext db)
@@ -31,6 +31,16 @@ namespace Library.Controllers
       _db.Books.Add(book);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+    public ActionResult Details(int id)
+    {
+      var model = _db.Books
+        .Include(author => author.JoinEntities1)
+        .ThenInclude(join => join.Author)
+        .Include(copy => copy.JoinEntities2)
+        .ThenInclude(join2 => join2.Copy)
+        .FirstOrDefault(book => book.BookId == id);
+      return View(model);
     }
   }
 }(
