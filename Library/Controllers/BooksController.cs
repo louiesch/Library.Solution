@@ -43,6 +43,22 @@ namespace Library.Controllers
       return View(model);
     }
 
+    public ActionResult Edit(int id)
+    {
+      var thisBook = _db.Books.FirstOrDefault(book => book.BookId == id);
+      return View(thisBook);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Book book)
+    {
+      _db.Entry(book).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+
+
+    }
+
     public ActionResult Delete(int id)
     {
       var thisBook = _db.Books.FirstOrDefault(book => book.BookId == id);
@@ -58,4 +74,4 @@ namespace Library.Controllers
       return RedirectToAction("Index");
     }
   }
-}(
+}
