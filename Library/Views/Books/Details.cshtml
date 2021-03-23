@@ -1,0 +1,42 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Library.Models
+@model Book;
+
+<h2>@Html.DisplayFor(model => model.Title) Details</h2>
+
+@if(@Model.JoinEntities1.Count == 0)
+{
+  <p>No Authors have been added to this book</p>
+}
+else
+{
+  <h4>Authors:</h4>
+  <ul>
+    @foreach(AuthorBook join in Model.JoinEntities1)
+    {
+      <li>@join.Author.Name</li>
+    }
+  </ul>
+}
+@if(@Model.JoinEntities2.Count == 0)
+{
+  <p>No copies available for checkout</p>
+}
+else
+{
+  <h4>Copies available:</h4>
+  <ul>
+    @foreach(BookCopy join2 in Model.JoinEntities2)
+    {
+      <li>@join2.Copy.CopyId</li>
+    }
+  </ul>
+}
+
+<p>@Html.ActionLink("Back to list of books", "Index")</p>
+<p>@Html.ActionLink("Edit this Book", "Edit", new {id = Model.BookId})</p>
+<p>@Html.ActionLink("Delete Book", "Delete", new {id = Model.BookId})</p>
+<p>@Html.ActionLink("Add Author", "AddAuthor", new {id = Model.BookId})</p>
