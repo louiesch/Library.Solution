@@ -32,5 +32,20 @@ namespace Library.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    public ActionResult Delete(int id)
+    {
+      var thisAuthor = _db.Authors.FirstOrDefault(author => author.AuthorId == id);
+      return View(thisAuthor);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteComfirmed(int id)
+    {
+      var thisAuthor = _db.Authors.FirstOrDefault(author => author.AuthorId == id);
+      _db.Authors.Remove(thisAuthor);
+      return RedirectToAction("Index");
+    }
+
   }
 }
