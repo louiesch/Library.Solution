@@ -52,23 +52,24 @@ Functionality___
 
 Workflow___
 ApplicationUser = Patron
-1. Models
+DONE 1. Models
   DONE - Book models
   DONE - Author Models
   DONE - Copies Models
   DONE - Patron Models (ApplicationUser)
-  - LibraryContext models
-  - DesignTimeDbContextFactory models
+  DONE - LibraryContext models
+  DONE- DesignTimeDbContextFactory models
   DONE - AuthorBook Models
   (sort itself out?) - CopiesPatrons Models
   DONE - BookCopies Models
-2. Home Controller and Home View
+DONE 2. Home Controller and Home View
 3. Book Class
   - Create Index Route then View
   - Create "Create" route then view
   - Create Delete route then view
   - Create Update route then view
   - Create Details route then view
-4. Patrons (User Application)
-  - Controllers
-  - Login page view
+4. Author Class
+  - Create Index Route then view
+  - Create "Create" route then view
+  - Create Delete route then view
