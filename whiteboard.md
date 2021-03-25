@@ -64,12 +64,16 @@ DONE 1. Models
   DONE - BookCopies Models
 DONE 2. Home Controller and Home View
 3. Book Class
-  - Create Index Route then View
-  - Create "Create" route then view
-  - Create Delete route then view
-  - Create Update route then view
-  - Create Details route then view
+  Done - Create Index Route then View
+  Done - Create "Create" route then view
+  Done - Create Delete route then view
+  DONE - Create Edit route then view
+  Done - Create Details route then view
 4. Author Class
-  - Create Index Route then view
-  - Create "Create" route then view
-  - Create Delete route then view
+  DONE - Create Index Route then view
+  DONE - Create "Create" route then view
+  DONE - Create Delete route then view
+  DONE - Create "AddAuthor" route IN BOOK
+5. Copy Class
+  - Create "AddCopy" route IN BOOK
+  - Create "DeleteCopy" route IN BOOK

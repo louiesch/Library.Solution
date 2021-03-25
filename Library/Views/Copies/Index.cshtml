@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Library.Models;
+@model IEnumerable<Library.Models.Copy>
+
+<h1>Copies You Have Rented</h1>
+@if(@Model.Any())
+{
+  <ul>
+    @foreach(var copy in Model)
+    {
+      <li>@copy.CopyId : @copy.DueDate - @foreach(var join in copy.JoinEntities2){ @join.Book.Title} </li>
+    }
+  </ul>
+}
+else
+{
+  <h3>No Copies Rented</h3>
+}
+
+<p>@Html.ActionLink("Rent new Book", "Create")</p>
